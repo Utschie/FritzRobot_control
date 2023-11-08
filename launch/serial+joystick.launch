@@ -1,0 +1,4 @@
+<launch>
+ <include file="$(find fritzrobot_serial)/launch/serial_driver.launch"></include>
+ <include file="$(find fritzrobot_control)/launch/joystick.launch"></include>
+</launch>
