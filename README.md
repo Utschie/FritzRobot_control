@@ -3,6 +3,9 @@
 ## Description
 robot's control pkgs
 ##
+
+### 2023-12-26 update
+added odometry in gazebo through the service "get_model_state" 
 ### 2023-11-14 update
 https://user-images.githubusercontent.com/33782458/282789273-b32c4797-414c-4ea5-ad79-b59723b437a7.mp4
 ### 2023-11-03 update
