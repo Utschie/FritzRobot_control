@@ -8,9 +8,9 @@ find_package(catkin REQUIRED COMPONENTS
   tf
 )
 
-
 catkin_package(
   CATKIN_DEPENDS roscpp std_msgs nav_msgs tf
+
 )
 
 
@@ -29,7 +29,6 @@ if(nav_msgs_EXPORTED_TARGETS)
 endif()
 
 target_link_libraries(odometry_publisher ${catkin_LIBRARIES})
-
 
 add_executable(gazebo_odometry src/nav/gazebo_odometry.cpp)
 target_link_libraries(gazebo_odometry ${catkin_LIBRARIES})
