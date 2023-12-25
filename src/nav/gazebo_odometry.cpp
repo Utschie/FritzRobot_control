@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 //    quaternion.setRPY(0, 0, tf::getYaw(odom.pose.pose.orientation));
     transform.setOrigin(tf::Vector3(odom.pose.pose.position.x, odom.pose.pose.position.y, odom.pose.pose.position.z) );
     transform.setRotation(quaternion);
-    odom_br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "odom", "base_link"));  //广播 odom到base_link的tf
+    odom_br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "odom", "base_footprint"));  //广播 odom到base_link的tf
 
     ros::spinOnce();
     loop_rate.sleep();
