@@ -1,6 +1,7 @@
 //
-// Created by jsy on 23.12.23.
-//
+// Created by jsy on 27.12.23.
+//This node publishes the odom solved only from the encoders
+
 #include <ros/ros.h>
 #include <tf/transform_broadcaster.h>
 #include <nav_msgs/Odometry.h>
@@ -24,7 +25,7 @@ int main(int argc, char** argv){
     current_time = ros::Time::now();
     last_time = ros::Time::now();
 
-    ros::Rate r(1.0);
+    ros::Rate r(200);
     while(n.ok()){
         current_time = ros::Time::now();
 

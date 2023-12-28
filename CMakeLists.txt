@@ -22,13 +22,14 @@ include_directories(
 add_executable(joy_ext src/joy_ext.cpp)
 target_link_libraries(joy_ext ${catkin_LIBRARIES})
 
-add_executable(odometry_publisher src/nav/odometry_publisher.cpp)
-
+add_executable(odom_fuser src/nav/odom_fuser.cpp)
 if(nav_msgs_EXPORTED_TARGETS)
-  add_dependencies(odometry_publisher ${nav_msgs_EXPORTED_TARGETS})
+  add_dependencies(odom_fuser ${nav_msgs_EXPORTED_TARGETS})
 endif()
-
-target_link_libraries(odometry_publisher ${catkin_LIBRARIES})
+target_link_libraries(odom_fuser ${catkin_LIBRARIES})
 
 add_executable(gazebo_odometry src/nav/gazebo_odometry.cpp)
 target_link_libraries(gazebo_odometry ${catkin_LIBRARIES})
+
+add_executable(odom_publisher src/nav/odom_publisher.cpp)
+target_link_libraries(odom_publisher ${catkin_LIBRARIES})

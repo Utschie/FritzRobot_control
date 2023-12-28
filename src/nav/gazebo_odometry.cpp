@@ -14,7 +14,7 @@ int main(int argc, char **argv)
   static tf::TransformBroadcaster odom_br;  //tf广播
   tf::Transform transform;
   tf::Quaternion quaternion;
-  ros::Rate loop_rate(10);
+  ros::Rate loop_rate(50);
 
   while(ros::ok())
   {

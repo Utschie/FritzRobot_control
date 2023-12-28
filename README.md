@@ -3,7 +3,9 @@
 ## Description
 robot's control pkgs
 ##
-
+### 2023-12-28 update
+added odom_fuser, which takes ekf estimated orientation as yaw, synchornizing the /imu(50 hz) with chassis/vel(200hz)
+added odom_publisher, forked from official tutorial, which solve the pose only on encoder's data.
 ### 2023-12-26 update
 added odometry in gazebo through the service "get_model_state" 
 ### 2023-11-14 update
