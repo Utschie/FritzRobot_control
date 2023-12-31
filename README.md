@@ -3,6 +3,10 @@
 ## Description
 robot's control pkgs.
 ##
+### 2023-12-31 update
+odom published with odom_fuser, and visible in rviz. The model's and map's descriptions are in [`FritzRobot_description`](https://github.com/Utschie/FritzRobot_description)
+
+https://private-user-images.githubusercontent.com/33782458/293521114-47dbf14f-da07-41da-9ce6-780ed813ba5d.mp4
 ### 2023-12-28 update
 added odom_fuser, which takes ekf estimated orientation as yaw, synchornizing the /imu(50 hz) with chassis/vel(200hz)
 added odom_publisher, forked from official tutorial, which solve the pose only on encoder's data.
