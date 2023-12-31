@@ -1,7 +1,7 @@
 # Fritzrobot_control
 
 ## Description
-robot's control pkgs
+robot's control pkgs.
 ##
 ### 2023-12-28 update
 added odom_fuser, which takes ekf estimated orientation as yaw, synchornizing the /imu(50 hz) with chassis/vel(200hz)
