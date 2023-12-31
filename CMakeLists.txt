@@ -19,7 +19,7 @@ include_directories(
   include/${PROJECT_NAME}/
 )
 
-add_executable(joy_ext src/joy_ext.cpp)
+add_executable(joy_ext src/joy/joy_ext.cpp)
 target_link_libraries(joy_ext ${catkin_LIBRARIES})
 
 add_executable(odom_fuser src/nav/odom_fuser.cpp)

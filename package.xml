@@ -59,6 +59,7 @@
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
   <build_export_depend>nav_msgs</build_export_depend>
+  <build_depend>navigation</build_depend>
 
   
   <exec_depend>geometry_msgs</exec_depend>
@@ -66,6 +67,8 @@
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>nav_msgs</exec_depend>
   <exec_depend>tf</exec_depend>
+  <exec_depend>teleop_twist_joy</exec_depend>
+  <exec_depend>navigation</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

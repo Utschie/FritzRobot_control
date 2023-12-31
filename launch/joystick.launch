@@ -6,7 +6,7 @@
     <param name="cmd_vel_topic" value="$(arg cmd_vel_topic)" type="str" />
     <include file="$(find teleop_twist_joy)/launch/teleop.launch">
       <arg name="joy_config" value="xbox"/>
-      <arg name="config_filepath" value="$(find fritzrobot_control)/config/teleop_twist_joy_node.yaml"/>
+      <arg name="config_filepath" value="$(find fritzrobot_control)/src/joy/config/teleop_twist_joy_node.yaml"/>
     </include>
     <node pkg="fritzrobot_control" name="joy_ext" type="joy_ext"/>
     
