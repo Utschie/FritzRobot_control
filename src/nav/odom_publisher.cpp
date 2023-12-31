@@ -46,7 +46,7 @@ int main(int argc, char** argv){
         geometry_msgs::TransformStamped odom_trans;
         odom_trans.header.stamp = current_time;
         odom_trans.header.frame_id = "odom";
-        odom_trans.child_frame_id = "base_footprint";
+        odom_trans.child_frame_id = "base_link";
 
         odom_trans.transform.translation.x = x;
         odom_trans.transform.translation.y = y;
@@ -60,7 +60,7 @@ int main(int argc, char** argv){
         nav_msgs::Odometry odom;
         odom.header.stamp = current_time;
         odom.header.frame_id = "odom";
-        odom.child_frame_id = "base_footprint";
+        odom.child_frame_id = "base_link";
 
         //set the position
         odom.pose.pose.position.x = x;

@@ -44,7 +44,7 @@ void Callback(const geometry_msgs::TwistStamped::ConstPtr& vel_msg, const sensor
     geometry_msgs::TransformStamped odom_trans;
     odom_trans.header.stamp = *current_time;
     odom_trans.header.frame_id = "odom";
-    odom_trans.child_frame_id = "base_footprint";
+    odom_trans.child_frame_id = "base_link";
 
     odom_trans.transform.translation.x = *x;
     odom_trans.transform.translation.y = *y;
@@ -58,7 +58,7 @@ void Callback(const geometry_msgs::TwistStamped::ConstPtr& vel_msg, const sensor
     nav_msgs::Odometry odom;
     odom.header.stamp = *current_time;
     odom.header.frame_id = "odom";
-    odom.child_frame_id = "base_footprint";
+    odom.child_frame_id = "base_link";
 
     //set the position
     odom.pose.pose.position.x = *x;
@@ -100,7 +100,7 @@ int main(int argc, char** argv){
     Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), vel_sub, pose_sub);
     sync.registerCallback(boost::bind(&Callback, _1, _2));
     //intialize the variables
-    *odom_pub= n.advertise<nav_msgs::Odometry>("odom_fused", 1);
+    *odom_pub= n.advertise<nav_msgs::Odometry>("odom", 1);
     *current_time= ros::Time::now();
     *last_time= ros::Time::now();
     *x=0.;
