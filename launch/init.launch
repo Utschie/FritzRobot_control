@@ -3,5 +3,7 @@
     <node pkg="fritzrobot_serial" name="downstream" type="downstream"/>
     <node pkg="fritzrobot_serial" name="pose_estimation" type="pose_estimation"/>
     <node pkg="fritzrobot_control" name="odom_fuser" type="odom_fuser"/>
+    <include file="$(find astra_camera)/launch/gemini.launch"></include>
+
 
 </launch>

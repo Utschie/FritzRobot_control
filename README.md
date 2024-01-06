@@ -3,6 +3,8 @@
 ## Description
 robot's control pkgs.
 ##
+### 2024-01-07 update
+add rgbd camera node, the camera's driving pkg [`astra_camera`](https://github.com/orbbec/ros_astra_camera) is supplied by the manufacturer. The pkg is 
 ### 2023-12-31 update
 odom published with odom_fuser, and visible in rviz. The model's and map's descriptions are in [`FritzRobot_description`](https://github.com/Utschie/FritzRobot_description)
 
