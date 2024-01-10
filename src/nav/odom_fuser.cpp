@@ -44,7 +44,7 @@ void Callback(const geometry_msgs::TwistStamped::ConstPtr& vel_msg, const sensor
     geometry_msgs::TransformStamped odom_trans;
     odom_trans.header.stamp = *current_time;
     odom_trans.header.frame_id = "odom";
-    odom_trans.child_frame_id = "base_link";
+    odom_trans.child_frame_id = "base_footprint";
 
     odom_trans.transform.translation.x = *x;
     odom_trans.transform.translation.y = *y;
@@ -58,7 +58,7 @@ void Callback(const geometry_msgs::TwistStamped::ConstPtr& vel_msg, const sensor
     nav_msgs::Odometry odom;
     odom.header.stamp = *current_time;
     odom.header.frame_id = "odom";
-    odom.child_frame_id = "base_link";
+    odom.child_frame_id = "base_footprint";
 
     //set the position
     odom.pose.pose.position.x = *x;

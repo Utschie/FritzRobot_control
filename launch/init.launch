@@ -11,5 +11,25 @@
         <remap from="image" to="camera/depth/image_raw" />
     </node>
 
+  <!-- 设置launch文件的参数 -->
+    <arg name="map" default="cloister_gmapping.yaml" />
+    <arg name="map_file" default="$(find fritzrobot_control)/src/nav/maps/$(arg map)" />
+    <arg name="model" default="$(find xacro)/xacro '$(find fritzrobot_description)/xacro/mini_mec.xacro'"/>
+  <!--机器人模型的起点放置位置xyz坐标-->
+  <arg name="x_pos" default="1.0"/>
+  <arg name="y_pos" default="0.0"/>
+  <arg name="z_pos" default="0.0"/>
+  <arg name="roll" default="0.0"/>
+  <arg name="pitch" default="0.0"/>
+  <arg name="yaw" default="0.0"/>
 
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <param name="robot_description" command="$(arg model)" />
+  <!--必须要添加关节状态发布节点-->
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen"/>
+  <!-- 必须添加机器人状态发布节点 -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen"/>
+  <!-- 对于虚拟定位，需要设置一个/odom与/map之间的静态坐标变换 -->
+  <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 /map /odom 100" />
 </launch>
