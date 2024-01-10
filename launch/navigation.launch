@@ -5,7 +5,7 @@
   <!--include file="$(find amcl)/examples/amcl_omni.launch" /-->
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-    <rosparam file="$(find wheeltec_gazebo_function)/param_common/move_base_params.yaml"          command="load"/>
+    <rosparam file="$(find fritzrobot_control)/configs/move_base_params.yaml" command="load"/>
     <rosparam file="$(find fritzrobot_control)/configs/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find fritzrobot_control)/configs/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find fritzrobot_control)/configs/local_costmap_params.yaml" command="load" />
