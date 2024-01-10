@@ -3,6 +3,10 @@
 ## Description
 robot's control pkgs.
 ##
+### 2024-01-10 update
+modified the costmap's configs, launch move_base to navigate. Shown in the video below.
+
+https://github.com/Utschie/FritzRobot_control/assets/33782458/aa32b7f8-7650-4b97-a6c7-4735f200c06d
 ### 2024-01-09 update
 launch depthimage_to_laserscan to generate pseudo-laserscan
 ### 2024-01-07 update
