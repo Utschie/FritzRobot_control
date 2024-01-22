@@ -3,6 +3,9 @@
 ## Description
 robot's control pkgs.
 ##
+### 2024-01-22 update
+add a subscriber subscribing the pointcloud of velodyne lidar and covert the pointcloud2 to pointcloud
+
 ### 2024-01-10 update
 modified the costmap's configs, launch move_base to navigate. Shown in the video below.
 

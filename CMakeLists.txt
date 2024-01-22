@@ -33,3 +33,6 @@ target_link_libraries(gazebo_odometry ${catkin_LIBRARIES})
 
 add_executable(odom_publisher src/nav/odom_publisher.cpp)
 target_link_libraries(odom_publisher ${catkin_LIBRARIES})
+
+add_executable(pointcloud_sub src/nav/pointcloud_sub.cpp)
+target_link_libraries(pointcloud_sub ${catkin_LIBRARIES})
