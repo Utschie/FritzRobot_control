@@ -22,9 +22,8 @@ void Callback(const sensor_msgs::PointCloud2 ::ConstPtr& msg)
 
 int main(int argc, char** argv)
 {
-    ros::init(argc, argv, "joy_ext");//初始化节点和名称
+    ros::init(argc, argv, "pointcloud_sub");//初始化节点和名称
     ros::NodeHandle h;
-    ROS_INFO("Joystick control started.");
     pc1_pub = new ros::Publisher;
     pc2_sub = new ros::Subscriber;
     //loop_rate=new ros::Rate(100);

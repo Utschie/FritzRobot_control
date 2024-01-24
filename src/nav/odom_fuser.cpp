@@ -107,7 +107,10 @@ int main(int argc, char** argv){
     *y=0.;
     *yaw=0.;
 
-    ros::spin();
+    while(ros::ok())
+    {
+        ros::spinOnce();
+    }
 
     delete odom_pub;
     delete current_time;
